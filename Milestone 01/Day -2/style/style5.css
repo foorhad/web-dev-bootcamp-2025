@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    background-image: linear-gradient(green, white, purple);
+}
+
+.paragraph {
+    font-size: 20px;
+    background-color: purple;
+    border: 3px solid purple;
+    margin: 30px;
+    padding: 20px;
+    color: antiquewhite;
+    border-radius: 20px;
+    text-align: justify;
+    box-shadow: 10px 10px 10px rgb(8, 127, 182);
+}
+
+.heading {
+    text-align: center;
+}
+
+.incident {
+    border: 2px solid black;
+    display: inline-block;
+    width: 222px;
+    padding: 20px;
+    border-radius: 20px;
+    display: none;
+}
+
+.image img {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}

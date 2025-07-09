@@ -1,0 +1,46 @@
+body {
+    max-width: 1170px;
+    background-color: plum;
+    margin: 0 auto;
+}
+
+.card-section {
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card {
+    width: 300px;
+    border: 2px solid green;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+    text-align: left;
+}
+
+.card:hover {
+    background-color: goldenrod;
+    border: 2px solid rgb(9, 26, 9);
+}
+
+.card img {
+    width: 200px;
+}
+
+.card button {
+    background-color: greenyellow;
+    font-size: 1.25em;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.card button:hover {
+    box-shadow: 5px 5px 5px red;
+    background-color: purple;
+}

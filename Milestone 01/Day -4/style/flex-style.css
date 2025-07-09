@@ -1,0 +1,56 @@
+.container div {
+    background-color: green;
+    font-size: 2em;
+    border: 2px solid red;
+    height: 100px;
+    width: 200px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+}
+
+.box-container div {
+    border: 2px solid black;
+    width: 190px;
+    height: 100px;
+    font-size: 2em;
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+.box-container {
+    display: flex;
+}
+
+
+.card-container div {
+    border: 2px solid plum;
+    width: 180px;
+    height: 150px;
+    font-size: 3em;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+}
+
+.student-role div {
+    border: 2px solid rgb(38, 0, 252);
+    width: 180px;
+    height: 100px;
+    font-size: 3em;
+    text-align: center;
+}
+
+.student-role {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,33 @@
+* {
+    margin: 0px;
+}
+
+.header-container {
+    text-align: center;
+    background-image: url(../image/world.jpg);
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.description {
+    margin: 40px;
+    color: rgba(180, 255, 4, 0.753);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+select {
+    margin-bottom: 300px;
+}
+
+.heading {
+    border: 2px solid rgb(248, 5, 5);
+    border-radius: 100%;
+    display: inline-block;
+    padding: 20px;
+    margin: 40px;
+    width: 200px;
+
+}

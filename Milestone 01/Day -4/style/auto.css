@@ -1,0 +1,33 @@
+.container {
+    background-color: lightgoldenrodyellow;
+    height: 300px;
+}
+
+.auto {
+    background-color: lightgreen;
+    max-width: 300px;
+    height: 250px;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+ul li {
+    list-style: none;
+
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+ul li:hover {
+    text-decoration: underline;
+    color: aqua;
+    background-color: aqua;
+}

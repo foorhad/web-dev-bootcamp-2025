@@ -1,0 +1,33 @@
+.conent-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: greenyellow;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.conent-container img {
+    width: 100%;
+    height: 400px;
+}
+
+.conent-container .content {
+    width: 800px;
+}
+
+.conent-container .content button {
+    color: greenyellow;
+    background-color: rgb(226, 118, 118);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+body {
+    max-width: 1270px;
+    background-color: bisque;
+    margin: 0 auto;
+}

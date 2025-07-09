@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+}
+
+.header {
+    background-image: url(../image/im.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: tomato;
+    /* back */
+    width: 1000px;
+    height: 400px;
+}
+
+.header h1 {
+    /* color: black; */
+}
+
+h1 {
+    color: aliceblue;
+    text-decoration: overline;
+}
+
+.blog {
+    margin: 50px;
+    box-shadow: 10px 10px 20px 20px rgb(42, 25, 58);
+}
+
+.blogs {
+    font-size: larger;
+    color: white;
+}
+
+.incident {
+    color: rgb(221, 217, 217);
+    border: 2px solid green;
+    display: inline-block;
+    height: 60px;
+}
+
+.second {
+    /* display: none; */
+
+}
