@@ -20,6 +20,15 @@ header {
 
 }
 
+/* shared style */
+.secondary-bg {
+    background-color: #e7e4e2fd;
+}
+
+.primary-color {
+    color: #fd6e0a;
+}
+
 /* dark color font */
 .dark-color {
     color: #474747;
@@ -30,9 +39,7 @@ header {
     font-size: 45px;
 }
 
-.primary-color {
-    color: #fd6e0a;
-}
+
 
 nav ul li {
     list-style: none;
@@ -62,6 +69,15 @@ nav ul {
 
 }
 
+.color-btn2 {
+    font-weight: bold;
+    color: #fd6e0a;
+    border: 2px solid #fd6e0a;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 18px 35px;
+}
+
 .banner {
     display: flex;
     justify-content: space-between;
@@ -89,4 +105,85 @@ nav ul {
 
 .banner-image {
     width: 580px;
+}
+
+/* about styles */
+main {
+    max-width: 1140px;
+    margin: 0 auto 0 auto;
+}
+
+main section {
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+
+.about {
+    border-radius: 10px;
+    padding: 30px 30px;
+    text-align: center;
+    margin: 130px 200px;
+}
+
+.section-title {
+    font-size: 35px;
+    font-weight: bold;
+    color: #181818;
+}
+
+.section-description {
+    font-size: 18px;
+    color: #474747;
+    padding: 0px 30px;
+}
+
+.about-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.about-item {
+    text-wrap: wrap;
+}
+
+.item-title {
+    font-size: 20px;
+    color: #757575;
+}
+
+.item-description {
+    font-size: 20px;
+    font-weight: bold;
+    color: #757575;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.card {
+    width: 267px;
+    border-radius: 5px;
+    padding: 30px 30px;
+    background-color: rgba(224, 206, 206, 0.486);
+    box-shadow: 0px 6px 50px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #181818;
+    font-weight: bold;
+
+}
+
+.card p {
+    font-size: 16px;
+    color: #757575;
 }
