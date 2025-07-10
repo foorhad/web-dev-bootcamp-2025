@@ -22,7 +22,7 @@ header {
 
 /* shared style */
 .secondary-bg {
-    background-color: #e7e4e2fd;
+    background-color: #FFFDD0;
 }
 
 .primary-color {
@@ -186,4 +186,73 @@ main section {
 .card p {
     font-size: 16px;
     color: #757575;
+}
+
+/* resume section styles */
+.resume-container {
+    display: flex;
+    gap: 20px;
+}
+
+.resume-column-title {
+    font-size: 30px;
+    color: #474747;
+    font-weight: bold;
+}
+
+.experience-title {
+    font-weight: bold;
+    font-size: 25px;
+    color: #474747;
+}
+
+.experience-sub-title {
+    font-weight: 600px;
+    font-size: 24px;
+    color: #474747;
+}
+
+.experience-description {
+    font-size: 16px;
+    color: #757575;
+}
+
+.resume hr {
+    margin: 30px 5px;
+}
+
+.resume-download-cv {
+    margin-top: 50px;
+}
+
+/* footer styels */
+footer {
+    max-width: 1600px;
+}
+
+.footer-column {
+    width: 50%;
+}
+
+.connection-sec {
+    display: flex;
+    padding: 130px 150px;
+    gap: 100px;
+}
+
+
+.section-description1 {
+    font-size: 16px;
+    color: #474747;
+}
+
+.text-box {
+    border-radius: 5px;
+    font-size: 16px;
+    display: block;
+    height: 64px;
+    width: 100%;
+    padding: 18px 50px 18px 30px;
+    margin-bottom: 20px;
+    border: none;
 }
