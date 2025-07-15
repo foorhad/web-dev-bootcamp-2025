@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+    <style>
+        h1::after {
+            content: '.pdf.';
+            color: red;
+            text-decoration: underline;
+        }
+
+        h1::before {
+            content: 'start ';
+            color: rgb(9, 214, 112);
+            background-color: purple;
+        }
+
+        p::first-letter {
+            font-size: 30px;
+            font-weight: bold;
+            color: red;
+        }
+
+        ::selection {
+            background-color: rgb(1, 190, 74);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>hi</h1>
+    <h1>hello</h1>
+    <h1>How are you?</h1>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro fugiat magni, voluptas quo exercitationem saepe
+        dolores consequuntur? Ipsum, temporibus pariatur doloribus quia quaerat dignissimos sequi ad. Eius praesentium
+        laudantium modi.</p>
+
+    <p>Yunus studied at his village school in the early years. When his family moved to Chittagong, he enrolled in the
+        Lamabazar Primary School. Later, he studied at Chittagong Collegiate School and passed the matriculation
+        examination, in which he secured the 16th position among 39,000 students in East Pakistan During his school
+        years,</p>
+</body>
+
+</html>
