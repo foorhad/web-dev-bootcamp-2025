@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div img {
+            max-width: 200px;
+            margin-right: 10px;
+        }
+
+        .left {
+            border: 1px solid gray;
+            display: flex;
+            margin-bottom: 10px;
+            padding: 20px;
+        }
+
+        .right {
+            border: 1px solid gray;
+            display: flex;
+            padding: 20px;
+        }
+
+        button {
+            background-color: rgb(85, 85, 224);
+            padding: 7px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+        }
+
+        @media screen and (max-width:576px) {
+            .container img {
+                max-width: 100%;
+                margin-right: 10px;
+                display: flex;
+                margin: 0 auto;
+
+            }
+
+            .left {
+                border: 1px solid gray;
+                display: block;
+                margin-bottom: 10px;
+                padding: 20px;
+            }
+
+            .right {
+                border: 1px solid gray;
+                display: block;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="images/foods.webp" alt="">
+            <div class="content">
+                <h2>Post Title will be here</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero temporibus fuga eius iste quaerat nulla
+                    odit
+                    debitis quae animi dignissimos! Similique asperiores impedit dicta quam quod beatae qui voluptates
+                    aliquam?
+                </p>
+                <button>Read More</button>
+            </div>
+        </div>
+        <div class="right">
+            <img src="images/d.jpg" alt="">
+            <div class="content">
+                <h2>Post Title will be here</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero temporibus fuga eius iste quaerat nulla
+                    odit
+                    debitis quae animi dignissimos! Similique asperiores impedit dicta quam quod beatae qui voluptates
+                    aliquam?
+                </p>
+                <button>Read More</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

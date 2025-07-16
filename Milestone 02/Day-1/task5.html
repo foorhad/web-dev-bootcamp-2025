@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div img {
+            max-width: 200px;
+            margin-right: 10px;
+        }
+
+        .left {
+
+            display: flex;
+            margin-bottom: 10px;
+            padding: 20px;
+        }
+
+        .right {
+
+            display: flex;
+            padding: 20px;
+        }
+
+        button {
+            background-color: rgb(85, 85, 224);
+            padding: 7px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+        }
+
+        @media screen and (max-width:576px) {
+            .container img {
+                max-width: 100%;
+                margin-right: 10px;
+                display: flex;
+                margin: 0 auto;
+
+            }
+
+            .left {
+                display: block;
+                margin-bottom: 10px;
+                padding: 20px;
+            }
+
+            .right {
+                flex-direction: column-reverse;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="images/foods.webp" alt="">
+            <div class="content">
+                <h2>Post Title will be here</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero temporibus fuga eius iste quaerat nulla
+                    odit
+                    debitis quae animi dignissimos! Similique asperiores impedit dicta quam quod beatae qui voluptates
+                    aliquam?
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="content">
+                <h2>Post Title will be here</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero temporibus fuga eius iste quaerat nulla
+                    odit
+                    debitis quae animi dignissimos! Similique asperiores impedit dicta quam quod beatae qui voluptates
+                    aliquam?
+                </p>
+            </div>
+            <img src="images/d.jpg" alt="">
+        </div>
+    </div>
+
+
+</body>
+
+</html>
