@@ -14,15 +14,12 @@ img {
     flex: 1;
 }
 
-.horizontal-collapse img {
-    height: 50%;
+.vertical-collage img {
+    height: calc((100% - 5px)/2);
 }
 
-.horizontal-collapse-second img {
-    height: 25%;
-    width: 100%;
-}
-
-.horizontal-collapse-second .square {
-    display: flex;
+.square-collage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
 }
