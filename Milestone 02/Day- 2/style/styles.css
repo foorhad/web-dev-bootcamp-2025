@@ -1,0 +1,28 @@
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.row {
+    height: 400px;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.row>div {
+    flex: 1;
+}
+
+.horizontal-collapse img {
+    height: 50%;
+}
+
+.horizontal-collapse-second img {
+    height: 25%;
+    width: 100%;
+}
+
+.horizontal-collapse-second .square {
+    display: flex;
+}
