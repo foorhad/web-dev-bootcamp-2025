@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        .box {
+            border: 2px solid green;
+            width: 300px;
+            height: 200px;
+        }
+
+        #box-1 {
+            /* overflow: auto; */
+            overflow-y: auto;
+        }
+
+        .ellipsis {
+            border: 3px solid red;
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p title="i'm serious student. i learn 6-8hours every single day. no compromise" class="ellipsis">i'm serious
+            student. i learn 6-8hours every single day. no compromise</p>
+    </header>
+    <div id="box-1" class="box">
+        <h3>box - 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quos at officiis totam, necessitatibus,
+            velit illum quasi natus placeat cumque aliquid? Earum, beatae blanditiis repudiandae nesciunt laborum
+            dolorum incidunt quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab officiis, sapiente unde
+            doloremque in doloribus aspernatur sed? Reprehenderit, molestiae fugiat. Odit itaque tempore earum sit animi
+            vel minima delectus quidem!</p>
+    </div>
+    <div id="box-1" class="box">
+        <h3>box - 2</h3>
+        <p>Labore impedit fuga beatae fugit maxime optio at earum nobis sunt numquam quisquam, adipisci incidunt odit,
+            similique repellat dolores illo iusto libero soluta dolore! Quasi facere molestiae maxime cum nobis? Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Aliquam illo, recusandae hic architecto aliquid
+            voluptates delectus eius dolores reprehenderit non dolorem quaerat aperiam, harum distinctio cupiditate
+            autem quibusdam nostrum expedita?</p>
+    </div>
+    <div id="box-1" class="box">
+        <h3>box - 3</h3>
+        <p>Nobis totam ipsam doloremque alias perferendis reprehenderit quos nihil odit quo dolore est quis vitae
+            nostrum, quas numquam illum? Enim quidem recusandae nihil voluptate nisi unde. Quibusdam provident facere
+            eligendi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium suscipit reiciendis eum.
+            Ducimus dolorum at, iste delectus quaerat ut sed, et ex dignissimos eveniet accusamus autem vel molestiae
+            quas quasi!</p>
+    </div>
+</body>
+
+</html>
