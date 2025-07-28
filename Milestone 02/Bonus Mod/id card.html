@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>student id card</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      .display-flex {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      .std-card {
+        width: 500px;
+        margin: 100px auto;
+      }
+      .header img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      .header {
+        flex: 1;
+      }
+      .info {
+        flex: 1;
+      }
+      .img-sec {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        background-image: url(download.jpg);
+        padding-top: 20px;
+        border-radius: 20px 20px 0px 0px;
+      }
+      .header,
+      .info {
+        border: 2px solid green;
+        border-radius: 20px;
+        padding: 10px;
+      }
+      .header h2 {
+        text-align: center;
+        margin: 10px 0;
+      }
+      .header p {
+        font-weight: bold;
+        margin: 5px 0;
+      }
+      .info p {
+        font-weight: bold;
+        margin: 10px 0;
+      }
+      .info img {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="std-card display-flex">
+      <div class="header">
+        <div class="img-sec">
+          <img src="abdullaha_al_forhad.jpg" alt="" />
+        </div>
+        <h2>Student identity</h2>
+        <p>Name : Abdullah al Forhad</p>
+        <p>Student Id : 592665f</p>
+        <p>Department : Computer Science & Technology</p>
+        <p>Course : Mern-Stack Development</p>
+      </div>
+      <div class="info">
+        <p>Name : Abdullah Al Forhad</p>
+        <p>Institute : Programming hero, Banani, Dhaka</p>
+        <p>contact : 01827616032</p>
+        <p>Email : forhadkhan20330@gmail.com</p>
+        <p>Emergency contact : 01882220189</p>
+        <img src="untitled.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
