@@ -19,8 +19,8 @@ console.log(numsz.toFixed(2));
 let vals;
 console.log(isNaN(vals));
 
-console.log("******************************************** float value");
-const y = isNaN('12');
+console.log("******************************************** string and value");
+const y = isNaN('120');
 console.log(y);
 const x = isNaN(1 -'12');
 console.log(x);
