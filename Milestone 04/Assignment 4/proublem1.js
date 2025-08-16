@@ -1,6 +1,6 @@
 function totalFine(fare){
     if(typeof fare==='string' || fare < 1 ){
-        return 'invalid'
+        return 'Invalid'
     }
         
     else{
@@ -8,6 +8,6 @@ function totalFine(fare){
         return fine
     }
 }
-// console.log(totalFine("Gorib tai ticket katinai"))
+// console.log(totalFine(200))
 
 
