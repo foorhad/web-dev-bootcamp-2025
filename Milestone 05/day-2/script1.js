@@ -7,6 +7,18 @@ let std={
         console.log("My eductaion subject type is : ", subject);
     }
 }
-const listCollection = document.getElementsByTagName('p');
-console.log(listCollection)
-for(const li of listCollection)console.log(li.textContent);
+
+//get by tag
+// const listCollection = document.getElementsByTagName('p');
+
+// get by id
+// const listCollection = document.getElementById('ctg');
+
+
+//get by class
+// const listCollection = document.getElementsByClassName('dis')
+
+//get by queryselectorAll
+const listCollection = document.querySelectorAll("#bdy p span")
+console.log(listCollection);
+for(const li of listCollection)console.log(li.innerText);
