@@ -20,5 +20,18 @@ let std={
 
 //get by queryselectorAll
 const listCollection = document.querySelectorAll("#bdy p span")
+
 console.log(listCollection);
 for(const li of listCollection)console.log(li.innerText);
+
+const nm = document.getElementById("name")
+nm.style.color = 'pink';
+nm.style.padding= '10pxf'
+nm.style.borderRadius='5px'
+nm.style.background = 'red';
+nm.style.textAlign = 'center'
+nm.style.fontWeight = 'bold'
+nm.style.fontSize='30px'
+
+ const nm1 = document.getElementById("names1");
+  nm1.setAttribute("title", "this is name of me");
