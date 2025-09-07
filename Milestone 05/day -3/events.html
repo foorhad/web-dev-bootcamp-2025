@@ -6,10 +6,27 @@
     <title>Dom Events</title>
 </head>
 <body>
-    <h1>JS Dom Events</h1>
+    <h1 id="header-1">JS Dom Events</h1>
+   
     <button onclick="console.log(2)">click here</button>
     <button onclick="console.log('hifjd')">Another</button>
-   
+    <input type="text" name="" id="">
+    
+    <button onclick="makeyellow()">Make yellow</button>
+    <button onclick="makeamazing()">Dark theme</button>
+    <button onclick="hc()">header color</button>
+    <script>
+        function hc(){
+            const header1 = document.getElementById("header-1");
+            header1.style.color = 'white';
+            header1.style.background='blue'
+            header1.style.borderRadius = '10px'
+            header1.style.padding = '10px'
+            header1.style.textAlign='center'
+            header1.style.fontSize = '40px'
+        }
+    </script>
+    
     <script src="events.js"></script>
 </body>
 </html>
