@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Amazing comment box</title>
+    <style>
+        .comment{
+            border: 2px solid rgb(0, 0, 0);
+            background-color: rgb(55, 195, 55);
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Makes Amazing Comment box</h1>
+
+    <div id="comment-container">
+        <p class="comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda libero possimus minima magnam ipsa soluta illum quam temporibus, iusto nesciunt officia rem sequi dolorem vel fugiat consectetur saepe similique error.</p>
+        <p class="comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda libero possimus minima magnam ipsa soluta illum quam temporibus, iusto nesciunt officia rem sequi dolorem vel fugiat consectetur saepe similique error.</p>
+        <p class="comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda libero possimus minima magnam ipsa soluta illum quam temporibus, iusto nesciunt officia rem sequi dolorem vel fugiat consectetur saepe similique error.</p>
+    </div>
+
+    <!-- <form action=""> -->
+        <textarea name="txt" id="txtArea" cols="20" rows="5"></textarea><br><br>
+        <button id="btn" type="submit">Submit</button>
+    <!-- </form> -->
+
+    <script>
+        document.getElementById('btn')
+        .addEventListener('click',function(){
+            console.log('button');
+
+            // step 2 get the text
+            const textInput= document.getElementById('txtArea')
+            const commentBox = textInput.value
+            console.log(commentBox);
+
+            // step3 pick up the parent node
+            const commentContainer = document.getElementById('comment-container');
+            console.log(commentContainer)
+
+            // create p tag and set the inner text
+            const Sec = document.createElement('p');
+            Sec.classList.add('comment')
+            Sec.innerText = commentBox;
+
+            // append the new p tag to the parent node
+            commentContainer.append(Sec);
+
+            // clean the comment box
+
+            textInput.value = ''
+           
+
+        })
+    </script>
+</body>
+</html>
