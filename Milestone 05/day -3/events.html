@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dom Events</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 id="header-1">JS Dom Events</h1>
-   
-    <button onclick="console.log(2)">click here</button>
-    <button onclick="console.log('hifjd')">Another</button>
-    <input type="text" name="" id="">
-    
-    <button onclick="makeyellow()">Make yellow</button>
-    <button onclick="makeamazing()">Dark theme</button>
-    <button onclick="hc()">header color</button>
+
+    <button onclick="console.log(2)">click here</button><br /><br />
+    <button onclick="console.log('hifjd')">Another</button><br /><br />
+    <input type="text" name="" id="inp" /><br /><br />
+
+    <button onclick="makeyellow()">Make yellow</button><br /><br />
+    <button onclick="makeamazing()">Dark theme</button><br /><br />
+    <button onclick="hc()">header color</button><br /><br />
     <script>
-        function hc(){
-            const header1 = document.getElementById("header-1");
-            header1.style.color = 'white';
-            header1.style.background='blue'
-            header1.style.borderRadius = '10px'
-            header1.style.padding = '10px'
-            header1.style.textAlign='center'
-            header1.style.fontSize = '40px'
-        }
+      function hc() {
+        document.body.style.backgroundColor = "green";
+        const header1 = document.getElementById("header-1");
+        header1.style.color = "white";
+        header1.style.background = "blue";
+        header1.style.borderRadius = "10px";
+        header1.style.padding = "10px";
+        header1.style.textAlign = "center";
+        header1.style.fontSize = "40px";
+      }
     </script>
-    
+
+    <button id="golden-color">click for background color golden</button>
+    <script>
+      document
+        .getElementById("golden-color")
+        .addEventListener("click", function () {
+          document.body.style.background = "goldenrod";
+        });
+    </script>
+
+    <button id="make-purple">Make purple</button><br /><br />
+    <script>
+      document
+        .getElementById("make-purple")
+        .addEventListener("click", function () {
+          document.body.style.background = "purple";
+        });
+    </script>
+
     <script src="events.js"></script>
-</body>
+  </body>
 </html>
