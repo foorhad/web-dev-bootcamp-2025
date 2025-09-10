@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble</title>
+
+    <style>
+        body{
+            height: 350px;
+            border: 3px solid red;
+            padding: 20px;
+        }
+        #list-item{
+            border: 2px solid black;
+            padding: 20px;
+        }
+        #item-1{
+            /* height: 300px; */
+            border: 3px solid red;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+        #item-2{
+            /* height: 300px; */
+            border: 3px solid green;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+        #item-3{
+            /* height: 300px; */
+            border: 3px solid burlywood;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+        #item-4{
+            /* height: 300px; */
+            border: 3px solid yellowgreen;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+        #item-5{
+            /* height: 300px; */
+            border: 3px solid palevioletred;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section id="sec1">
+
+        <h1>Bubble funtion</h1>
+        <ul id="list-item">
+            <li id="item-1">Forhad</li>
+            <li id="item-2">For</li>
+            <li id="item-3">had</li>
+            <li id="item-4">Fd</li>
+            <li id="item-5">Fd12</li>
+        </ul>
+    </section>
+
+    <script>
+        const item = document.getElementById('item-2')
+        .addEventListener('click', function(){
+            console.log("click on list 2")
+        })
+        const listItem = document.getElementById('list-item')
+        .addEventListener('click', function(){
+            console.log("click on full list")
+        })
+        const sec = document.getElementById('sec1')
+        .addEventListener('click', function(){
+            console.log("click on bodyf")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More events</title>
+</head>
+<body>
+    <button id="btn">don't Click me</button>
+    <input type="text" placeholder="input your user id" id="user-id">
+    <input type="text" placeholder="input your password" id="password">
+    
+    <script>
+        // const step = document.getElementById('btn')
+        // .addEventListener('mousemove',function(){
+        //     console.log('button-mousemove')
+        // })
+
+        // const step = document.getElementById('btn')
+        // .addEventListener('mouseenter',function(){
+        //     console.log('button-mousemove')
+        // })
+
+        // const step = document.getElementById('btn')
+        // .addEventListener('mouseout',function(){
+        //     console.log('button-mousemove')
+        // })
+
+    //     document.getElementById('user-id')
+    //     .addEventListener('focus',function(){
+    //         console.log('user id wrote completed')
+    //     })
+    //     document.getElementById('password')
+    //     .addEventListener('focus',function(){
+    //         console.log('Password fullfill')
+    //     })
+    //    document.getElementById('user-id')
+    //     .addEventListener('blur',function(){
+    //         console.log('done')
+    //     })
+    //    document.getElementById('password')
+    //     .addEventListener('blur',function(){
+    //         console.log('done')
+    //     })
+
+     document.getElementById('password')
+        .addEventListener('keydown',function(event){
+            console.log('typing ',event.target.value)
+        })
+     document.getElementById('user-id')
+        .addEventListener('keyup',function(event){
+            console.log('typing ',event.target.value)
+        })
+    </script>
+</body>
+</html>

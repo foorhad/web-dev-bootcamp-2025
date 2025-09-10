@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Events summary</title>
+</head>
+<body id="main1">
+    <h1>Dom Event Summary</h1>
+    <input type="text" placeholder="input name" id="name-input">
+    <button  onclick="add()" id="btn">Add Summary</button>
+    <script>
+        function add(){
+            // console.log('button added')
+            const nameInput = document.getElementById('name-input')
+            const txt = nameInput.value;
+            // console.log('Input text : ', txt);
+
+            // get parent node
+            const parentNode = document.getElementById('main1')
+
+            // create new tag where put new content
+            const paragraph = document.createElement('p');
+            paragraph.innerText = txt;
+            paragraph.classList.add('p-tag');
+            // paragraph.classList.remove('p-tag');
+            // paragraph.className = ''
+            console.log(paragraph);
+
+            // append
+            parentNode.append(paragraph)
+        }
+    </script>
+</body>
+</html>
