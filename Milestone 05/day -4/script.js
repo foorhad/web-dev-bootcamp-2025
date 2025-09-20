@@ -10,7 +10,7 @@ document.getElementById("login-btn").addEventListener("click", function(e){
     const userPassConvert = parseInt(userPass)
 
     if(phoneNumber === userPhoneConvert && passNumber === userPassConvert){
-        window.location.href="./pro.html"
+        window.location.href="./nav.html"
     }
     else alert("Invalid")
    
