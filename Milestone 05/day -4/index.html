@@ -13,7 +13,10 @@
       type="text/css"
     />
   </head>
-  <body class="bg-[#F4F5F7] h-[100vh] flex justify-center items-center" >
+  <body class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center" >
+    <div class="flex justify-center items-center w-[350px] h-[200px]  bg-[url(./assets/bg.png)] bg-cover">
+      <img src="assets/Group.png" alt="">
+    </div>
     <form class="bg-white p-6 rounded-lg w-[350px]">
         <div class="bg-white">
             <label for="">Mobile Number</label><br>
@@ -23,7 +26,10 @@
             <label for="">4 Digit Pin</label><br>
             <input class="w-full mt-2 border-[#F4F5F7] bg-[#F4F5F7] p-1 rounded-3xl " type="password" required placeholder="Enter 4 Digit pin">
         </div>
-        <button class="p-1 text-white w-full bg-[#0874F2] rounded-3xl">Login</button>
+        <button id="login-btn" class="p-1 text-white w-full bg-[#0874F2] rounded-3xl">Login</button>
     </form>
+
+    <!-- script connection -->
+     <script src="script.js"></script>
   </body>
 </html>
