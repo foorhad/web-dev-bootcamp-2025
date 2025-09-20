@@ -13,5 +13,9 @@ document.getElementById("login-btn").addEventListener("click", function(e){
         window.location.href="./nav.html"
     }
     else alert("Invalid")
-   
+
+
+})
+document.getElementById("add-money").addEventListener("click", function(e){
+    window.location.href="./add-money.html"
 })
