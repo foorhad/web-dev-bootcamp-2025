@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body id="body-section">
+    <div id="cmnt-box" class="mt-5 mx-auto max-w-[1250px]">
+      <input
+        class="outline"
+        id="txt-box"
+        type="text"
+        placeholder="share your thoughts"
+      />
+    </div>
+
+    <div id="parent-sec" class="box flex items-center justify-center gap-5">
+      <h1>Hello Peoples</h1>
+      <br /><br />
+      <button
+        id="like-button"
+        class="btn bg-blue-400 text-white p-1 rounded-sm"
+      >
+        <span id="like-cnt">0</span>
+        Like
+      </button>
+      <button id="cmnt-btn" class="btn bg-blue-400 text-white p-1 rounded-sm">
+        Comment
+      </button>
+      <button id="share-btn" class="btn bg-blue-400 text-white p-1 rounded-sm">
+        Share
+      </button>
+    </div>
+
+    <div class="animal max-w-[1250px] mx-auto">
+      <img
+        id="animals"
+        class="animals w-[100%]"
+        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ9pfJM6VKaBv1iIzVD07dDMbLUYyKgChJSe9yaMmivKV6kKr7VH0zKmz5DCtIv-V_3XUrEicErKxTZT7Od4yHZBpafz6TbKnk7WeQXtVl0"
+        alt=""
+      />
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
