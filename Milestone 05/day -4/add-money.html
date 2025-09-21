@@ -27,11 +27,12 @@
     >
       <div class="flex items-center">
         <img src="assets/Group.png" alt="" />
-        <p class="font-extrabold">
-          $45000 <br /><span class="font-semibold text-[#8f8f8f]"
-            >Available Balance</span
-          >
-        </p>
+        <div>
+          <p class="font-extrabold">
+            $<span id="total-amount">45000</span><br />
+          </p>
+          <p class="font-semibold text-[#8f8f8f]">Available Balance</p>
+        </div>
       </div>
       <button class="text-[#8f8f8f] border-1 p-2 rounded-md">
         <i class="fa-solid fa-right-from-bracket rotate-180"></i> Log Out
@@ -77,7 +78,10 @@
       <form class="bg-white p-4 rounded-3xl">
         <!-- <h1 class="mb-3"></h1> -->
         <label for="">Select a Bank</label><br />
-        <select class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]">
+        <select
+          id="bank-name"
+          class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]"
+        >
           <option disabled selected>Select bank</option>
           <option>SIBL</option>
           <option>IBBL</option>
@@ -87,6 +91,7 @@
         <br />
         <label for="">Bank Account Number</label><br />
         <input
+          id="bank-account"
           class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]"
           type="number"
           placeholder="Enter 11 digit account number"
@@ -94,6 +99,7 @@
         <br /><br />
         <label for="">Amount to Add</label><br />
         <input
+          id="add-amnt"
           class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]"
           type="number"
           placeholder="Add Amount to withdraw"
@@ -101,17 +107,20 @@
         <br /><br />
         <label for="">Pin Number</label><br />
         <input
+          id="bank-pin"
           class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]"
           type="password"
           placeholder="Enter 4 digit pin number"
         />
         <button
-          id="login-btn"
+          id="add-money-btn"
           class="my-4 p-1 text-white w-full bg-[#0874F2] rounded-3xl"
         >
-          Login
+          Add Money
         </button>
       </form>
     </div>
+
+    <script src="add-money.js"></script>
   </body>
 </html>
