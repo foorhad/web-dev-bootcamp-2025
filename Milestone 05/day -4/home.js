@@ -27,3 +27,33 @@ document
     document.getElementById("total-amount").innerText = presentAmount;
     // } else alert("didn't matched information");
   });
+
+document.getElementById("withdraw-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const withdrawAmount = document.getElementById("withdraw-amount");
+  const withdrawconvert = parseInt(withdrawAmount.value);
+
+  const availableBal = document.getElementById("total-amount");
+  const availableBalconvert = parseInt(availableBal.innerText);
+
+  if (withdrawconvert > availableBalconvert) {
+    alert("you have insufficient amount");
+    return;
+  } else {
+    const remainingBal = availableBalconvert - withdrawconvert;
+    availableBal.innerText = remainingBal;
+  }
+});
+
+// add money
+document.getElementById("add-money-sec").addEventListener("click", function () {
+  document.getElementById("cashOut").style.display = "none";
+  document.getElementById("add-money").style.display = "block";
+});
+
+// cashout
+document.getElementById("cashout-sec").addEventListener("click", function () {
+  document.getElementById("cashOut").style.display = "block";
+  document.getElementById("add-money").style.display = "none";
+});
