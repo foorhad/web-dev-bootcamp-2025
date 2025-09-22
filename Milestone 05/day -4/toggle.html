@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn1">Button1</button>
+    <button id="btn2">Button2</button>
+
+    <h1 id="hea1">Heading1</h1>
+    <h1 id="hea2">Heading2</h1>
+
+    <script>
+      document.getElementById("btn1").addEventListener("click", function () {
+        document.getElementById("hea1").style.display = "none";
+        document.getElementById("hea2").style.display = "block";
+      });
+      document.getElementById("btn2").addEventListener("click", function () {
+        document.getElementById("hea2").style.display = "none";
+        document.getElementById("hea1").style.display = "block";
+      });
+    </script>
+  </body>
+</html>
