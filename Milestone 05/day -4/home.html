@@ -63,22 +63,36 @@
           <p class="text-[#080808] mt-2">Cashout</p>
         </div>
 
-        <div class="border-1 border-[#d9d2d2] p-4 text-center rounded-md">
+        <!-- Transfer Money -->
+        <div
+          id="transerMoney"
+          class="border-1 border-[#d9d2d2] p-4 text-center rounded-md"
+        >
           <img class="m-auto" src="assets/money1.png" alt="" />
           <p class="text-[#080808] mt-2">Transfer Money</p>
         </div>
 
-        <div class="border-1 border-[#d9d2d2] p-4 text-center rounded-md">
+        <!-- Get Bonus -->
+        <div
+          id="getBonus"
+          class="border-1 border-[#d9d2d2] p-4 text-center rounded-md"
+        >
           <img class="m-auto" src="assets/bonus1.png" alt="" />
           <p class="text-[#080808] mt-2">Get Bonus</p>
         </div>
-
-        <div class="border-1 border-[#d9d2d2] p-4 text-center rounded-md">
+        <!-- Pay bill -->
+        <div
+          id="payBill"
+          class="border-1 border-[#d9d2d2] p-4 text-center rounded-md"
+        >
           <img class="m-auto" src="assets/purse1.png" alt="" />
           <p class="text-[#080808] mt-2">Pay Bill</p>
         </div>
-
-        <div class="border-1 border-[#d9d2d2] p-4 text-center rounded-md">
+        <!-- Transactions -->
+        <div
+          id="transaction"
+          class="border-1 border-[#d9d2d2] p-4 text-center rounded-md"
+        >
           <img class="m-auto" src="assets/transaction1.png" alt="" />
           <p class="text-[#080808] mt-2">Transactions</p>
         </div>
@@ -170,6 +184,181 @@
           Withdraw Money
         </button>
       </form>
+    </div>
+
+    <!-- Transfer Money section -->
+    <div id="transfer-money" class="my-7 px-4 max-w-lg mx-auto">
+      <h1 class="m-4 text-[18px] font-semibold">Transfer Money</h1>
+      <form class="bg-pink-100 p-4 rounded-3xl">
+        <label for="" class="font-medium font-[#080808]"
+          >User Account Number</label
+        ><br />
+        <input
+          id="agent-number"
+          class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]"
+          type="number"
+          placeholder="Enter 11 digit number"
+        />
+        <br /><br />
+        <label for="" class="font-medium font-[#080808]">Amount</label><br />
+        <input
+          id="withdraw-amount"
+          class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]"
+          type="number"
+          placeholder="Enter Amount to Transfer"
+        />
+        <br /><br />
+        <label for="" class="font-medium font-[#080808]">Pin Number</label
+        ><br />
+        <input
+          id="account-pin"
+          class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]"
+          type="password"
+          placeholder="Enter 4 digit pin number"
+        />
+        <button
+          id="transferMoney-btn"
+          class="my-4 p-1 text-white w-full bg-[#0874F2] rounded-3xl"
+        >
+          Send Now
+        </button>
+      </form>
+    </div>
+
+    <!-- Get Bonus section -->
+    <div id="get-bonus" class="my-7 px-4 max-w-lg mx-auto">
+      <h1 class="m-4 text-[18px] font-semibold">Get Bonus</h1>
+      <form class="bg-pink-100 p-4 rounded-3xl">
+        <label for="" class="font-medium font-[#080808]"
+          >Enter Bonus Coupon</label
+        ><br />
+        <input
+          type="text"
+          class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]"
+          placeholder="Enter your Coupon"
+        />
+        <button
+          id="transferMoney-btn"
+          class="my-4 p-1 text-white w-full bg-[#0874F2] rounded-3xl"
+        >
+          Get Bonus
+        </button>
+      </form>
+    </div>
+
+    <!-- Pay Bill section -->
+    <div id="pay-bill" class="my-7 px-4 max-w-lg mx-auto">
+      <h1 class="m-4 text-[18px] font-semibold">Pay Bill</h1>
+      <form class="bg-pink-100 p-4 rounded-3xl">
+        <label for="" class="font-medium font-[#080808]">Select To Pay</label
+        ><br />
+        <select
+          name=""
+          id=""
+          class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]"
+        >
+          <option disabled selected>Select Bank</option>
+          <option>QTKM</option>
+          <option>NSU</option>
+          <option>BSPI</option>
+          <option>CPI</option>
+          <option>DPI</option>
+        </select>
+        <br /><br />
+        <label for="" class="font-medium font-[#080808]"
+          >Biller Account Number</label
+        >
+        <input
+          id="agent-number"
+          class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]"
+          type="number"
+          placeholder="Enter account number"
+        />
+        <br /><br />
+        <label for="" class="font-medium font-[#080808]">Amount to pay</label
+        ><br />
+        <input
+          id="withdraw-amount"
+          class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]"
+          type="number"
+          placeholder="Add Amount to pay"
+        />
+        <br /><br />
+        <label for="" class="font-medium font-[#080808]">Pin Number</label
+        ><br />
+        <input
+          id="account-pin"
+          class="p-2 border-none rounded-3xl w-full bg-[#F4F5F7]"
+          type="password"
+          placeholder="Enter 4 digit pin number"
+        />
+        <button
+          id="transferMoney-btn"
+          class="my-4 p-1 text-white w-full bg-[#0874F2] rounded-3xl"
+        >
+          Pay Now
+        </button>
+      </form>
+    </div>
+
+    <!-- Transaction History -->
+    <div id="transactionHistory" class="px-20 pb-6">
+      <div class="my-7 px-4 max-w-lg mx-auto flex justify-between items-center">
+        <h1 class="text-[18px] font-semibold">Latest Payment</h1>
+        <h1 class="text-[14px] text-[#a7a3a3]">View All</h1>
+      </div>
+      <div
+        class="mb-4 p-4 border-1 rounded-xl border-[#d9d2d2] max-w-lg mx-auto flex justify-between items-center bg-white"
+      >
+        <div class="flex justify-between items-center gap-5">
+          <img src="assets/wallet1.png" alt="" />
+          <p class="font-extrabold">
+            Electricity Bill <br /><span class="text-[12px] text-[#8f8f8f]"
+              >Today 01:44 AM</span
+            >
+          </p>
+        </div>
+        <p class="text-3xl font-extrabold">&#8942;</p>
+      </div>
+      <div
+        class="mb-4 p-4 border-1 rounded-xl border-[#d9d2d2] max-w-lg mx-auto flex justify-between items-center bg-white"
+      >
+        <div class="flex justify-between items-center gap-5">
+          <img src="assets/wallet1.png" alt="" />
+          <p class="font-extrabold">
+            Bank Deposit <br /><span class="text-[12px] text-[#8f8f8f]"
+              >Today 01:44 AM</span
+            >
+          </p>
+        </div>
+        <p class="text-3xl font-extrabold">&#8942;</p>
+      </div>
+      <div
+        class="mb-4 p-4 border-1 rounded-xl border-[#d9d2d2] max-w-lg mx-auto flex justify-between items-center bg-white"
+      >
+        <div class="flex justify-between items-center gap-5">
+          <img src="assets/wallet1.png" alt="" />
+          <p class="font-extrabold">
+            Mobile Recharge <br /><span class="text-[12px] text-[#8f8f8f]"
+              >Today 01:44 AM</span
+            >
+          </p>
+        </div>
+        <p class="text-3xl font-extrabold">&#8942;</p>
+      </div>
+      <div
+        class="p-4 border-1 rounded-xl border-[#d9d2d2] max-w-lg mx-auto flex justify-between items-center bg-white"
+      >
+        <div class="flex justify-between items-center gap-5">
+          <img src="assets/wallet1.png" alt="" />
+          <p class="font-extrabold">
+            Gas Bill <br /><span class="text-[12px] text-[#8f8f8f]"
+              >Today 01:44 AM</span
+            >
+          </p>
+        </div>
+        <p class="text-3xl font-extrabold">&#8942;</p>
+      </div>
     </div>
 
     <!-- script -->
