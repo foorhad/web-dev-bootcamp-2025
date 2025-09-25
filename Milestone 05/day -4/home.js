@@ -46,6 +46,11 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
   }
 });
 
+// logout
+document.getElementById("logOut").addEventListener("click", function () {
+  window.location.href = "./index.html";
+});
+
 // add money
 document.getElementById("add-money-sec").addEventListener("click", function () {
   document.getElementById("cashOut").style.display = "none";
@@ -99,7 +104,6 @@ document.getElementById("payBill").addEventListener("click", function () {
 // Transaction
 document.getElementById("transaction").addEventListener("click", function () {
   document.getElementById("transactionHistory").style.display = "block";
-
   document.getElementById("pay-bill").style.display = "none";
   document.getElementById("get-bonus").style.display = "none";
   document.getElementById("transfer-money").style.display = "none";

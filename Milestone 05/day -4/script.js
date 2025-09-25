@@ -11,7 +11,7 @@ document.getElementById("login-btn").addEventListener("click", function (e) {
   const userPassConvert = parseInt(userPass);
 
   if (phoneNumber === userPhoneConvert && passNumber === userPassConvert) {
-    window.location.href = "./add-money.html";
+    window.location.href = "./home.html";
   } else alert("Invalid");
 });
 // document.getElementById("add-money").addEventListener("click", function(e){
