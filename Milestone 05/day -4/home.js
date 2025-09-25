@@ -1,58 +1,118 @@
-document
-  .getElementById("add-money-btn")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    const bankName = document.getElementById("bank-name").value;
-    // console.log(bankName);
+// getValue
+function getNumber(id) {
+  return parseInt(document.getElementById(id).value);
+}
 
-    const bankAccount = document.getElementById("bank-account").value;
-    // console.log(bankAccount);
-    if (bankAccount.length < 9) {
-      alert("invalid bank account");
-      return;
-    }
+function getInnerText(id) {
+  return parseInt(document.getElementById(id).innerText);
+}
 
-    const addAmount = document.getElementById("add-amnt").value;
-    const addAmountConvert = parseInt(addAmount);
-    if (addAmountConvert <= 0) alert("add amount correctly");
+function depositAmount(addedAmount) {
+  const availableBal = getInnerText("total-amount");
+  const presentAmount = addedAmount + availableBal;
+  document.getElementById("total-amount").innerText = presentAmount;
+}
 
-    const bankPin = parseInt(document.getElementById("bank-pin").value);
-    let accountNum = parseInt(123456789),
-      bankPins = parseInt(1234);
-    // if (bankAccount === accountNum && bankPin === bankPins) {
-    const availableBal = document.getElementById("total-amount").innerText;
-    const availableBalconvert = parseInt(availableBal);
+function withdrawAmount(withdraw) {
+  const availableBal = getInnerText("total-amount");
+  const presentAmount = availableBal - withdraw;
+  document.getElementById("total-amount").innerText = presentAmount;
+}
+function getId(id) {
+  return document.getElementById(id);
+}
 
-    const presentAmount = addAmountConvert + availableBalconvert;
-    document.getElementById("total-amount").innerText = presentAmount;
-    // } else alert("didn't matched information");
-  });
-
-document.getElementById("withdraw-btn").addEventListener("click", function (e) {
+// ADD Amount
+getId("add-money-btn").addEventListener("click", function (e) {
   e.preventDefault();
 
-  const withdrawAmount = document.getElementById("withdraw-amount");
-  const withdrawconvert = parseInt(withdrawAmount.value);
+  const bankName = getvalue("bank-name");
+  const bankAccount = getNumber("bank-account");
 
-  const availableBal = document.getElementById("total-amount");
-  const availableBalconvert = parseInt(availableBal.innerText);
-
-  if (withdrawconvert > availableBalconvert) {
-    alert("you have insufficient amount");
+  if (bankAccount.length < 9) {
+    alert("invalid bank account");
     return;
-  } else {
-    const remainingBal = availableBalconvert - withdrawconvert;
-    availableBal.innerText = remainingBal;
+  }
+  const addAmountConvert = getNumber("add-amnt");
+
+  if (addAmountConvert <= 0) alert("add amount correctly");
+
+  const bankPin = getNumber("bank-pin");
+  if (bankPin === 1234) depositAmount(addAmountConvert);
+  else {
+    alert("invalid your pin");
+    return;
   }
 });
 
+// Withdraw Amount/ Cashout Amount
+getId("withdraw-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const withdraw = getNumber("withdraw-amount");
+
+  if (withdraw > getInnerText("total-amount")) {
+    alert("you have insufficient amount");
+    return;
+  } else if (getNumber("account-pin") === 1234) withdrawAmount(withdraw);
+  else {
+    alert("invalid pin");
+    return;
+  }
+});
+// Transfer Money
+getId("transferMoney-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const withdraw = getNumber("transfer-amount");
+
+  if (withdraw > getInnerText("total-amount")) {
+    alert("you have insufficient amount");
+    return;
+  } else if (getNumber("accounts-pin") === 1234) withdrawAmount(withdraw);
+  else {
+    alert("invalid pin");
+    return;
+  }
+});
+
+// Get Bonus
+getId("getBonus-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const couponNumber = getNumber("coupon-number");
+
+  if (couponNumber === 123456) {
+    depositAmount(5001);
+    alert("Coupon Code Successfuly Submitted");
+  } else {
+    alert("Coupon isn't Availble");
+    return;
+  }
+});
+
+// Pay bill
+getId("paybill-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const withdraw = getNumber("pay-amount");
+
+  if (withdraw > getInnerText("total-amount")) {
+    alert("you have insufficient amount");
+    return;
+  } else if (getNumber("bkash-pin") === 1234) withdrawAmount(withdraw);
+  else {
+    alert("invalid pin");
+    return;
+  }
+});
 // logout
-document.getElementById("logOut").addEventListener("click", function () {
+getId("logOut").addEventListener("click", function () {
   window.location.href = "./index.html";
 });
 
 // add money
-document.getElementById("add-money-sec").addEventListener("click", function () {
+getId("add-money-sec").addEventListener("click", function () {
   document.getElementById("cashOut").style.display = "none";
   document.getElementById("add-money").style.display = "block";
   document.getElementById("transfer-money").style.display = "none";
@@ -62,7 +122,7 @@ document.getElementById("add-money-sec").addEventListener("click", function () {
 });
 
 // cashout
-document.getElementById("cashout-sec").addEventListener("click", function () {
+getId("cashout-sec").addEventListener("click", function () {
   document.getElementById("cashOut").style.display = "block";
   document.getElementById("add-money").style.display = "none";
   document.getElementById("get-bonus").style.display = "none";
@@ -72,7 +132,7 @@ document.getElementById("cashout-sec").addEventListener("click", function () {
 });
 
 // Transer Money
-document.getElementById("transerMoney").addEventListener("click", function () {
+getId("transerMoney").addEventListener("click", function () {
   document.getElementById("transfer-money").style.display = "block";
   document.getElementById("cashOut").style.display = "none";
   document.getElementById("add-money").style.display = "none";
@@ -82,7 +142,7 @@ document.getElementById("transerMoney").addEventListener("click", function () {
 });
 
 // Get Bonus
-document.getElementById("getBonus").addEventListener("click", function () {
+getId("getBonus").addEventListener("click", function () {
   document.getElementById("get-bonus").style.display = "block";
   document.getElementById("transfer-money").style.display = "none";
   document.getElementById("cashOut").style.display = "none";
@@ -92,7 +152,7 @@ document.getElementById("getBonus").addEventListener("click", function () {
 });
 
 // pay bill
-document.getElementById("payBill").addEventListener("click", function () {
+getId("payBill").addEventListener("click", function () {
   document.getElementById("pay-bill").style.display = "block";
   document.getElementById("get-bonus").style.display = "none";
   document.getElementById("transfer-money").style.display = "none";
@@ -102,9 +162,9 @@ document.getElementById("payBill").addEventListener("click", function () {
 });
 
 // Transaction
-document.getElementById("transaction").addEventListener("click", function () {
-  document.getElementById("transactionHistory").style.display = "block";
-  document.getElementById("pay-bill").style.display = "none";
+getId("transaction").addEventListener("click", function () {
+  getId("transactionHistory").style.display = "block";
+  getId("pay-bill").style.display = "none";
   document.getElementById("get-bonus").style.display = "none";
   document.getElementById("transfer-money").style.display = "none";
   document.getElementById("cashOut").style.display = "none";

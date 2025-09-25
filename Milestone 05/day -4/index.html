@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tracking.png" />
     <title>Payoo Login Access</title>
     <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -13,23 +14,42 @@
       type="text/css"
     />
   </head>
-  <body class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center" >
-    <div class="flex justify-center items-center w-[350px] h-[200px]  bg-[url(./assets/bg.png)] bg-cover">
-      <img src="assets/Group.png" alt="">
+  <body
+    class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center"
+  >
+    <div
+      class="flex justify-center items-center w-[350px] h-[200px] bg-[url(./assets/bg.png)] bg-cover"
+    >
+      <img src="assets/Group.png" alt="" />
     </div>
     <form class="bg-white p-6 rounded-lg w-[350px]">
-        <div class="bg-white">
-            <label for="">Mobile Number</label><br>
-            <input id="phone-num" class="w-full mt-2 border-[#F4F5F7] bg-[#F4F5F7] p-1 rounded-3xl " type="number"  placeholder="Enter the number">
-        </div>
-        <div class=" bg-white my-5">
-            <label for="">4 Digit Pin</label><br>
-            <input id="pass-num" class="w-full mt-2 border-[#F4F5F7] bg-[#F4F5F7] p-1 rounded-3xl " type="password"  placeholder="Enter 4 Digit pin">
-        </div>
-        <button id="login-btn" class="p-1 text-white w-full bg-[#0874F2] rounded-3xl">Login</button>
+      <div class="bg-white">
+        <label for="">Mobile Number</label><br />
+        <input
+          id="phone-num"
+          class="w-full mt-2 border-[#F4F5F7] bg-[#F4F5F7] p-1 rounded-3xl"
+          type="number"
+          placeholder="Enter the number"
+        />
+      </div>
+      <div class="bg-white my-5">
+        <label for="">4 Digit Pin</label><br />
+        <input
+          id="pass-num"
+          class="w-full mt-2 border-[#F4F5F7] bg-[#F4F5F7] p-1 rounded-3xl"
+          type="password"
+          placeholder="Enter 4 Digit pin"
+        />
+      </div>
+      <button
+        id="login-btn"
+        class="p-1 text-white w-full bg-[#0874F2] rounded-3xl"
+      >
+        Login
+      </button>
     </form>
 
     <!-- script connection -->
-     <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
