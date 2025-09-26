@@ -106,67 +106,41 @@ getId("paybill-btn").addEventListener("click", function (e) {
     return;
   }
 });
+
 // logout
 getId("logOut").addEventListener("click", function () {
   window.location.href = "./index.html";
 });
 
+//features or function
 // add money
 getId("add-money-sec").addEventListener("click", function () {
-  document.getElementById("cashOut").style.display = "none";
-  document.getElementById("add-money").style.display = "block";
-  document.getElementById("transfer-money").style.display = "none";
-  document.getElementById("get-bonus").style.display = "none";
-  document.getElementById("pay-bill").style.display = "none";
-  document.getElementById("transactionHistory").style.display = "none";
+  const forms = document.getElementsByClassName("form");
+  for (const form in forms) form.style.display = "none";
+  // document.getElementById("add-money").style.display = "block";
 });
 
 // cashout
 getId("cashout-sec").addEventListener("click", function () {
   document.getElementById("cashOut").style.display = "block";
-  document.getElementById("add-money").style.display = "none";
-  document.getElementById("get-bonus").style.display = "none";
-  document.getElementById("transfer-money").style.display = "none";
-  document.getElementById("pay-bill").style.display = "none";
-  document.getElementById("transactionHistory").style.display = "none";
 });
 
 // Transer Money
 getId("transerMoney").addEventListener("click", function () {
   document.getElementById("transfer-money").style.display = "block";
-  document.getElementById("cashOut").style.display = "none";
-  document.getElementById("add-money").style.display = "none";
-  document.getElementById("get-bonus").style.display = "none";
-  document.getElementById("pay-bill").style.display = "none";
-  document.getElementById("transactionHistory").style.display = "none";
 });
 
 // Get Bonus
 getId("getBonus").addEventListener("click", function () {
   document.getElementById("get-bonus").style.display = "block";
-  document.getElementById("transfer-money").style.display = "none";
-  document.getElementById("cashOut").style.display = "none";
-  document.getElementById("add-money").style.display = "none";
-  document.getElementById("pay-bill").style.display = "none";
-  document.getElementById("transactionHistory").style.display = "none";
 });
 
 // pay bill
 getId("payBill").addEventListener("click", function () {
   document.getElementById("pay-bill").style.display = "block";
-  document.getElementById("get-bonus").style.display = "none";
-  document.getElementById("transfer-money").style.display = "none";
-  document.getElementById("cashOut").style.display = "none";
-  document.getElementById("add-money").style.display = "none";
-  document.getElementById("transactionHistory").style.display = "none";
 });
 
 // Transaction
 getId("transaction").addEventListener("click", function () {
   getId("transactionHistory").style.display = "block";
-  getId("pay-bill").style.display = "none";
-  document.getElementById("get-bonus").style.display = "none";
-  document.getElementById("transfer-money").style.display = "none";
-  document.getElementById("cashOut").style.display = "none";
-  document.getElementById("add-money").style.display = "none";
 });
