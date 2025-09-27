@@ -26,19 +26,18 @@ function getId(id) {
 getId("add-money-btn").addEventListener("click", function (e) {
   e.preventDefault();
 
-  const bankName = getvalue("bank-name");
   const bankAccount = getNumber("bank-account");
 
   if (bankAccount.length < 9) {
     alert("invalid bank account");
     return;
   }
-  const addAmountConvert = getNumber("add-amnt");
+  const addAmount = getNumber("add-amnt");
 
-  if (addAmountConvert <= 0) alert("add amount correctly");
+  if (addAmount <= 0) alert("add amount correctly");
 
   const bankPin = getNumber("bank-pin");
-  if (bankPin === 1234) depositAmount(addAmountConvert);
+  if (bankPin === 1234) depositAmount(addAmount);
   else {
     alert("invalid your pin");
     return;
@@ -60,6 +59,7 @@ getId("withdraw-btn").addEventListener("click", function (e) {
     return;
   }
 });
+
 // Transfer Money
 getId("transferMoney-btn").addEventListener("click", function (e) {
   e.preventDefault();
@@ -112,35 +112,86 @@ getId("logOut").addEventListener("click", function () {
   window.location.href = "./index.html";
 });
 
-//features or function
+function handleToggle(id) {
+  const forms = document.getElementsByClassName("form");
+  for (let form of forms) {
+    form.style.display = "none";
+  }
+  document.getElementById(id).style.display = "block";
+}
+
+//features or function toggle
 // add money
 getId("add-money-sec").addEventListener("click", function () {
-  const forms = document.getElementsByClassName("form");
-  for (const form in forms) form.style.display = "none";
-  // document.getElementById("add-money").style.display = "block";
+  handleToggle("add-money");
+  const formButton = document.getElementsByClassName("btn1");
+
+  for (const form of formButton) {
+    form.classList.remove("border-[#0874F2]", "bg-[#79FF79]");
+    form.classList.add("border-gray-300");
+  }
+  getId("add-money-sec").classList.remove("border-gray-300");
+  getId("add-money-sec").classList.add("border-[#0874F2]", "bg-[#79FF79]");
 });
 
 // cashout
 getId("cashout-sec").addEventListener("click", function () {
-  document.getElementById("cashOut").style.display = "block";
+  handleToggle("cashOut");
+  const formButton = document.getElementsByClassName("btn1");
+
+  for (const form of formButton) {
+    form.classList.remove("border-[#0874F2]", "bg-[#79FF79]");
+    form.classList.add("border-gray-300");
+  }
+  getId("cashout-sec").classList.remove("border-gray-300");
+  getId("cashout-sec").classList.add("border-[#0874F2]", "bg-[#79FF79]");
 });
 
 // Transer Money
 getId("transerMoney").addEventListener("click", function () {
-  document.getElementById("transfer-money").style.display = "block";
+  handleToggle("transfer-money");
+  const formButton = document.getElementsByClassName("btn1");
+  for (const form of formButton) {
+    form.classList.remove("border-[#0874F2]", "bg-[#79FF79]");
+    form.classList.add("border-gray-300");
+  }
+  getId("transerMoney").classList.remove("border-gray-300");
+  getId("transerMoney").classList.add("border-[#0874F2]", "bg-[#79FF79]");
 });
 
 // Get Bonus
 getId("getBonus").addEventListener("click", function () {
-  document.getElementById("get-bonus").style.display = "block";
+  handleToggle("get-bonus");
+  const formButton = document.getElementsByClassName("btn1");
+
+  for (const form of formButton) {
+    form.classList.remove("border-[#0874F2]", "bg-[#79FF79]");
+    form.classList.add("border-gray-300");
+  }
+  getId("getBonus").classList.remove("border-gray-300");
+  getId("getBonus").classList.add("border-[#0874F2]", "bg-[#79FF79]");
 });
 
 // pay bill
 getId("payBill").addEventListener("click", function () {
-  document.getElementById("pay-bill").style.display = "block";
+  handleToggle("pay-bill");
+  const formButton = document.getElementsByClassName("btn1");
+  for (const form of formButton) {
+    form.classList.remove("border-[#0874F2]", "bg-[#79FF79]");
+    form.classList.add("border-gray-300");
+  }
+  getId("payBill").classList.remove("border-gray-300");
+  getId("payBill").classList.add("border-[#0874F2]", "bg-[#79FF79]");
 });
 
 // Transaction
 getId("transaction").addEventListener("click", function () {
-  getId("transactionHistory").style.display = "block";
+  handleToggle("transactionHistory");
+  const formButton = document.getElementsByClassName("btn1");
+  for (const form of formButton) {
+    form.classList.remove("border-[#0874F2]", "bg-[#79FF79]");
+    form.classList.add("border-gray-300");
+  }
+  getId("transaction").classList.remove("border-gray-300");
+  getId("transaction").classList.add("border-[#0874F2]", "bg-[#79FF79]");
 });
