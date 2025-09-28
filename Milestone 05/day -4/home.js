@@ -22,6 +22,8 @@ function getId(id) {
   return document.getElementById(id);
 }
 
+const transactionData = [];
+
 // ADD Amount
 getId("add-money-btn").addEventListener("click", function (e) {
   e.preventDefault();
@@ -42,6 +44,12 @@ getId("add-money-btn").addEventListener("click", function (e) {
     alert("invalid your pin");
     return;
   }
+
+  const data = {
+    names: "Add Money",
+    date: new Date().toLocaleString(),
+  };
+  transactionData.push(data);
 });
 
 // Withdraw Amount/ Cashout Amount
@@ -58,6 +66,11 @@ getId("withdraw-btn").addEventListener("click", function (e) {
     alert("invalid pin");
     return;
   }
+  const data = {
+    names: "Cashout",
+    date: new Date().toLocaleString(),
+  };
+  transactionData.push(data);
 });
 
 // Transfer Money
@@ -74,6 +87,11 @@ getId("transferMoney-btn").addEventListener("click", function (e) {
     alert("invalid pin");
     return;
   }
+  const data = {
+    names: "Transfer Money",
+    date: new Date().toLocaleString(),
+  };
+  transactionData.push(data);
 });
 
 // Get Bonus
@@ -89,6 +107,11 @@ getId("getBonus-btn").addEventListener("click", function (e) {
     alert("Coupon isn't Availble");
     return;
   }
+  const data = {
+    names: "Bonus",
+    date: new Date().toLocaleString(),
+  };
+  transactionData.push(data);
 });
 
 // Pay bill
@@ -105,11 +128,36 @@ getId("paybill-btn").addEventListener("click", function (e) {
     alert("invalid pin");
     return;
   }
+  const data = {
+    names: "PayBill",
+    date: new Date().toLocaleString(),
+  };
+  transactionData.push(data);
 });
 
 // logout
 getId("logOut").addEventListener("click", function () {
   window.location.href = "./index.html";
+});
+
+// transaction history
+getId("transaction").addEventListener("click", function () {
+  const transactionContainer = getId("transaction-container");
+  for (const data of transactionData) {
+    const div = document.createElement("div");
+    div.innerHTML = `
+        <div class="mb-4 p-4 border-1 rounded-xl border-[#d9d2d2] max-w-lg mx-auto flex justify-between items-center bg-white">
+        <div class="flex justify-between items-center gap-5">
+          <img src="assets/wallet1.png" alt="" />
+          <h1>${data.names}</h1>
+          <p>${data.date}</p>
+        </div>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </div>
+    `;
+
+    transactionContainer.appendChild(div);
+  }
 });
 
 function handleToggle(id) {
