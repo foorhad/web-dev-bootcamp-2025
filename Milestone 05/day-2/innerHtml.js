@@ -2,16 +2,16 @@ console.log('file connected');
 const sections = document.getElementsByTagName('section')
 // const lst = document.querySelectorAll('section')
 console.log(sections)
-// for(const section of sections){
-//     console.log('section is: ',section);
-//     section.style.background = 'red';
-//     section.style.padding = '20px';
-//     section.style.marginBottom = '10px';
-//     section.style.borderRadius= '10px'
-//     section.style.color = 'white'
-//     section.style.border = '4px solid blue'
+for(const section of sections){
+    console.log('section is: ',section);
+    section.style.background = 'red';
+    section.style.padding = '20px';
+    section.style.marginBottom = '10px';
+    section.style.borderRadius= '10px'
+    section.style.color = 'white'
+    section.style.border = '4px solid blue'
 
-// }
+}
 
 for(const section of sections){
     section.classList.add('style-container')
@@ -66,8 +66,5 @@ booksection.innerHTML = `
         <li>Chattogram3</li>
         <li>Chattogram4</li>
     <ul/>
-
 `
-
-
 mainContainer.append(booksection)
