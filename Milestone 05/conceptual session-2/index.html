@@ -37,42 +37,48 @@
       <div class="w-100/30">
         <div class="cart-section1 flex justify-between gap-4">
           <div class="cart1 text-center bg-yellow-50 p-4">
-            <img class="bg-gray-300 px-15 py-5 rounded-sm mb-4" src="assets/kitchen-1.png" alt="">
+            <div class="bg-gray-300 px-15 py-5 rounded-sm mb-4">
+              <img src="assets/kitchen-1.png" alt="">
+            </div>
             <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star"
                 style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i
                 class="fa-regular fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star"
                 style="color: #FFD43B;"></i>
             </p>
             <h1 id="title" class="title font-bold">K. Accessories</h1>
-            <h1 class="text-gray-600"><span id="price" class="text-gray-600">50.78</span> TK</h1>
+            <h1 class="text-gray-600"><span id="price" class="text-gray-600">50.78</span></h1>
             <button id="btn1"
-              class="btn1 bg-[#E527B2] block w-full px-7 py-1 text-[12px] font-bold text-white rounded-lg">Add to
-              cart</button>
-
+              class="cart-btn bg-[#E527B2] block w-full px-7 py-1 text-[12px] font-bold text-white rounded-lg">Add to
+              Cart</button>
           </div>
           <div class="cart2 text-center bg-yellow-50 p-4">
-            <img class="bg-gray-300 px-15 py-5 rounded-sm mb-4" src="assets/kitchen-2.png" alt="">
+            <div class="bg-gray-300 px-15 py-5 rounded-sm mb-4">
+              <img src="assets/kitchen-2.png" alt="">
+            </div>
             <p><i class="fa-regular fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star"
                 style="color: #FFD43B;"></i><i class="fa-regular fa-star" style="color: #FFD43B;"></i><i
                 class="fa-regular fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star"
                 style="color: #FFD43B;"></i>
             </p>
             <h1 class="title font-bold">K. Accessories</h1>
-            <h1 class="text-gray-600"><span id="btn2" class="text-gray-600">456.00</span> TK</h1>
+            <h1 class="text-gray-600"><span id="btn2" class="text-gray-600">456.00</span></h1>
             <button id="btn1"
-              class="btn1 bg-[#E527B2] block w-full px-7 py-1 text-[12px] font-bold text-white rounded-lg">Add to
+              class="cart-btn bg-[#E527B2] block w-full px-7 py-1 text-[12px] font-bold text-white rounded-lg">Add to
               cart</button>
           </div>
           <div class="cart3 text-center bg-yellow-50 p-4">
-            <img class="bg-gray-300 px-15 py-5 rounded-sm mb-4" src="assets/kitchen-3.png" alt="">
+            <div class="bg-gray-300 px-15 py-5 rounded-sm mb-4">
+              <img src="assets/kitchen-3.png" alt="">
+            </div>
             <p><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star"
                 style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i
                 class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-regular fa-star"
                 style="color: #FFD43B;"></i>
             </p>
             <h1 class="title font-bold">Home Cooker</h1>
-            <h1 class="text-gray-600">49.00 TK</h1>
-            <button class="bg-[#E527B2] block w-full px-7 py-1 text-[12px] font-bold text-white rounded-lg">Add to
+            <h1 class="text-gray-600">49.00</h1>
+            <button class="cart-btn bg-[#E527B2] block w-full px-7 py-1 text-[12px] font-bold text-white rounded-lg">Add
+              to
               cart</button>
           </div>
         </div>
@@ -166,6 +172,11 @@
         </div>
         <div class="bg-yellow-50 p-4 mt-5 h-full">
 
+          <div class="flex justify-between items-center">
+            <h1 class="font-bold my-5">Cart</h1>
+            <button id="clr" class="rounded-md bg-slate-400 px-4 py-2 font-bold">Clear</button>
+          </div>
+
           <div id="cart-container">
 
           </div>
@@ -173,10 +184,11 @@
           <div class="border-1 border-gray-400 p-5 border-l-0 border-r-0 ">
             <h1 class="font-semibold text-gray-400">Total price : <span id="total-money"
                 class="total-money text-gray-400">00.00</span>TK</h1>
-            <h1 class="font-semibold">Discount : <span class="text-gray-400">0.00TK</span></h1>
-            <h1 class="font-semibold text-gray-400">Total: <span id="total-mo"
-                class="total-money text-gray-400">0.00</span>TK</h1>
+            <h1 class="font-semibold text-gray-400">Quantity : <span id="quantity-items"
+                class="text-gray-400">0.00</span> items
+            </h1>
           </div>
+
           <button class="w-full py-1 mt-3 font-semibold rounded-sm bg-[#E527B2] text-white">Make Purchase</button>
         </div>
 
