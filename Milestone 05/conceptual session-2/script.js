@@ -26,7 +26,7 @@ getId("btn1").addEventListener("click", function(){
     const titles= getId("title").innerText;
     const priceOfproduct = getId("price").innerText;
     const currentBalance =  getId("total-money").innerText;
-    const totalPrice = parseInt(priceOfproduct) + parseInt(currentBalance);
+    const totalPrice = Number(priceOfproduct) + Number(currentBalance);
     console.log(totalPrice)
     getId("total-money").innerText = totalPrice;
     let cartContainer = getId("cart-container");
