@@ -20,6 +20,7 @@ function getId(id){
     return document.getElementById(id); 
 }
 
+// traditional technique
 // getId("btn1").addEventListener("click", function(){
 
 //     // price
@@ -45,23 +46,22 @@ function getId(id){
 
 //total money
 
-const cartSbutton = document.getElementsByClassName("cart-btn");
-// console.log(cartSbutton);
-for(let cartButton of cartSbutton){
-    cartButton.addEventListener("click",function(){
+//delegation technique
+getId("product-container").addEventListener("click",function(e){
+    if(e.target.className.includes("cart-btn")){
+        const cartButton = e.target;
+    //get product details
         const productImage= cartButton.parentNode.childNodes[1].childNodes[1].src;
-        // console.log(productImage)
         const productTitle = cartButton.parentNode.childNodes[5].innerText
-        console.log(productTitle)
         const productPrice = cartButton.parentNode.childNodes[7].innerText
-        console.log(productPrice)
 
-        //total price in add to cart
+
+    //update price
         const currentBalance =  getId("total-money").innerText;
         const totalPrice = Number(productPrice) + Number(currentBalance);
-        console.log(totalPrice)
         getId("total-money").innerText = totalPrice;
-
+    
+    //create new div
         let cartContainer = getId("cart-container");
         const newCart = document.createElement("div");
         newCart.innerHTML = `
@@ -75,10 +75,52 @@ for(let cartButton of cartSbutton){
         `;
         const currentQuantity = Number(getId("quantity-items").innerText) + 1;
         getId("quantity-items").innerText = currentQuantity;
-        
+
+     //append new div in parent div   
     cartContainer.append(newCart);
-    });
-}
+        
+    }
+})
+
+//traverse technique
+// const cartSbutton = document.getElementsByClassName("cart-btn");
+
+// for(let cartButton of cartSbutton){
+
+
+
+//     cartButton.addEventListener("click",function(){
+//     //get product details
+//         const productImage= cartButton.parentNode.childNodes[1].childNodes[1].src;
+//         const productTitle = cartButton.parentNode.childNodes[5].innerText
+//         const productPrice = cartButton.parentNode.childNodes[7].innerText
+
+
+//     //update price
+//         const currentBalance =  getId("total-money").innerText;
+//         const totalPrice = Number(productPrice) + Number(currentBalance);
+//         console.log(totalPrice)
+//         getId("total-money").innerText = totalPrice;
+    
+//     //create new div
+//         let cartContainer = getId("cart-container");
+//         const newCart = document.createElement("div");
+//         newCart.innerHTML = `
+//         <div class="h-[120px] flex justify-between items-center bg-gray-300 py-10 px-2 rounded-sm mb-4">
+//             <img  src="${productImage}" alt="">
+//             <div>
+//               <h1 class="font-bold">${productTitle}</h1>
+//               <h1 class="text-gray-600">${productPrice}</h1>
+//             </div>
+//         </div>
+//         `;
+//         const currentQuantity = Number(getId("quantity-items").innerText) + 1;
+//         getId("quantity-items").innerText = currentQuantity;
+
+//      //append new div in parent div   
+//     cartContainer.append(newCart);
+//     });
+// }
 
 getId("clr").addEventListener("click",function(){
     getId("cart-container").innerHTML = "";
