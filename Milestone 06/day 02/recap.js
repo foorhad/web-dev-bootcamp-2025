@@ -1,7 +1,7 @@
 //arrow function
 
-const add = () => 'hello saddam';
-console.log(add());
+const add = x => x*2;
+console.log(add(5));
 
 
 //distructing

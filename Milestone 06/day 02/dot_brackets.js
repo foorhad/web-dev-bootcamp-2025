@@ -9,3 +9,4 @@ const nam = 'name'
 console.log("dot bracket:-",students[nam])
 console.log(students[1])
 console.log(students['gender']);
+console.log(students[1])
