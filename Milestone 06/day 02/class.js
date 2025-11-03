@@ -1,6 +1,7 @@
 class Player{
     constructor(name,age){
         this.name = name;
+        this.sallary = 18000
         this.age = age; 
         this.location = 'bangaldesh'
         // console.log("Calling the constructor method",name)
@@ -16,4 +17,4 @@ class Player{
 const player1 = new Player('rahim',25);
 // player1.person();
 // console.log(player1.getTeamName())
-console.log(player1 instanceof Player)
+console.log(player1)
